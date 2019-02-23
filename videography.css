@@ -1,7 +1,9 @@
+/* align the nav items to the center and change the color of the current nav
+item to red */
+
 #pageon {
     color: red;
      font-weight: bolder;
-
 }
 
 nav {

@@ -1,70 +1,46 @@
+/* align the nav items to the center and change the color of the current nav
+item to red */
 #pageon {
-    color: red;
-     font-weight: bolder;
-
+  color: red;
+  font-weight: bolder;
 }
 
 nav {
-    text-align: center;
+  text-align: center;
 }
 
 div {
-    text-align: center;
+  text-align: center;
 }
 
-
-/* Styles for the Nav - Start */
-#nav-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: black;
-     max-width: 1080px;
-    margin: 0 auto;
-}
-
-a:link,
-a:visited {
-    color: white;
-    text-decoration: none;
-    margin: 2px;
-}
-
-a:hover,
-a:active {
-    color: red;
-}
-
-/* Styles for the Nav - End */
-
-/* Styles for the Form - Start */
+/*Styles for mobile, tablet, and desktop start*/
 .contact {
-    background: lightgrey;
-    color: black;
-    text-transform: capitalize;
-     max-width: 1080px;
-    height: 55vh;
-    margin: 0 auto;
+  background: lightgrey;
+  color: black;
+  text-transform: capitalize;
+  max-width: 1080px;
+  height: 55%;
+  margin: 0 auto;
 }
 
 .contact-form {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-form__title {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .input-name,
 .input-email,
 .input-subject,
 .input-message {
-    width: 100%;
-    text-transform: capitalize;
-     max-width: 85%;
+  width: 100%;
+  text-transform: capitalize;
+  max-width: 85%;
 }
 
 .input-name,
@@ -72,39 +48,17 @@ a:active {
 .input-subject,
 .input-send,
 .input-message {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .input-message {
-    height: 200px;
+  height: 200px;
 }
 
 .input-send {
-    border-radius: 25px;
-    text-transform: capitalize;
-    width: 75px;
-    margin: 20px;
-
+  border-radius: 25px;
+  text-transform: capitalize;
+  width: 75px;
+  margin: 20px;
 }
-
-/*Styles for Form End*/
-
-@media screen and (min-width: 576px) {
-
-/* Styles for the Nav - Start */
-
-#nav-container{
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  text-align: center;
-  background-color: black;
-  padding-top: 5px;
-}
-
-/* Styles for the Nav - End */
-
-/*Styles for the Form Start*/
-
-
-
-    }
+/*Styles for mobile, tablet, and desktop end*/

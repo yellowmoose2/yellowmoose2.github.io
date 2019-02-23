@@ -1,6 +1,8 @@
+
+/* styles for the nav and grid placement*/
 #grid-container {
  font-family: Telugu Sangam MN, Telugu MN, sans-serif;
-    font-size: 1.1em;
+  font-size: 1.1em;
   text-align: center;
   color: white;
   display: grid;
@@ -11,7 +13,6 @@
   background-size: cover;
   height: 100vh;
   position: relative;
-
 }
 
 #title {
@@ -83,6 +84,7 @@ a:hover, a:active {
   justify-self: center;
 }
 
+/* break for tablet size screens */
 @media screen and (max-width:60em){
 
   a:link, a:visited {
@@ -90,12 +92,12 @@ a:hover, a:active {
   }
 }
 
+/* break for mobile screens */
 @media screen and (max-width:40em){
   #grid-container {
     grid-gap: 5px;
   }
   a:link, a:visited {
-    font-size: .5em;
     margin: 5px 5px 5px 5px;
   }
 
