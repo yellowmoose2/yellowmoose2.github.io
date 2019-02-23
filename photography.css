@@ -1,0 +1,129 @@
+
+
+#pageon {
+    color: red;
+     font-weight: bolder;
+
+}
+
+nav {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+
+/*Styles for mobile start*/
+
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    flex:0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-1{
+    background-image: url(img/banana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}.photo-2{
+    background-image: url(img/spin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}.photo-3{
+    background-image: url(img/rcmp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}.photo-4{
+    background-image: url(img/snow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}.photo-5{
+    background-image: url(img/skater.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}.photo-6{
+    background-image: url(img/leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Styles for mobile end*/
+
+/*Styles for desktop and tablet start*/
+
+@media screen and (min-width: 576px) {
+
+/*Styles for the Photos*/
+
+
+.photo-container {
+    display: grid;
+    height: 70vh;
+    grid-template-areas:
+        "block1 block2 block2 block3"
+        "block4 block4 block5 block6";
+    grid-gap: 10px;
+}
+
+.photo-1 {
+    grid-area: block1;
+    background-image: url(img/banana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-2 {
+    grid-area: block2;
+    background-image: url(img/spin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo-3 {
+    grid-area: block3;
+    background-image: url(img/rcmp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.photo-4 {
+    grid-area: block4;
+    background-image: url(img/snow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo-5 {
+    grid-area: block5;
+    background-image: url(img/skater.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo-6{
+    grid-area: block6;
+    background-image: url(img/leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    }
+
+/*Styles for desktop and tablet end*/
