@@ -1,11 +1,19 @@
+@mixin mybuttons {
+  align-self: center;
+  justify-self: center;
+}
+
+$textcolour: white;
+$fontstack: Telugu Sangam MN, Telugu MN, sans-serif;
+
 .gridcontainer {
   background: url("../../img/hammock.jpg") no-repeat center center fixed;
   height: 50vh;
   display: block;
-  font-family: Telugu Sangam MN, Telugu MN, sans-serif;
+  font-family: $fontstack;
    font-size: 1.1em;
    text-align: center;
-   color: white;
+   color: $textcolour;
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    grid-template-rows: repeat(3, 1fr);
@@ -39,7 +47,7 @@ a:link, a:visited {
   background-color: none;
   border: 2px solid white;
   border-radius: 5px;
-  color: white;
+  color: $textcolour;
   padding: 10px 25px;
   text-decoration: none;
   min-width: 120px;
@@ -52,35 +60,31 @@ a:hover, a:active {
 .about {
   grid-column: 3;
   grid-row: 2;
-  align-self: center;
-  justify-self: center;
+@include mybuttons;
 }
 
 .contact {
   grid-column: 4;
   grid-row: 2;
-  align-self: center;
-  justify-self: center;
+@include mybuttons;
+
 }
 .photography {
   grid-column: 2;
   grid-row: 3;
-  align-self: center;
-  justify-self: center;
+@include mybuttons;
 }
 
 .videography {
   grid-column: 3;
   grid-row: 3;
-  align-self: center;
-  justify-self: center;
+@include mybuttons;
 }
 
 .graphic_design {
   grid-column: 4;
   grid-row: 3;
-  align-self: center;
-  justify-self: center;
+@include mybuttons;
 }
 
 /* break for tablet size screens */
