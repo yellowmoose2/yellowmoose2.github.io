@@ -1,0 +1,145 @@
+.gridcontainer {
+  background: url("../../img/hammock.jpg") no-repeat center center fixed;
+  height: 50vh;
+  display: block;
+  font-family: Telugu Sangam MN, Telugu MN, sans-serif;
+   font-size: 1.1em;
+   text-align: center;
+   color: white;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-gap: 30px;
+   background-size: cover;
+   height: 100vh;
+   position: relative;
+}
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 4px;
+  font-style: oblique;
+  grid-column: 3 / span 2;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  font-style: oblique;
+  grid-column: 3 / span 2;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+}
+
+a:link, a:visited {
+  background-color: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  min-width: 120px;
+}
+
+a:hover, a:active {
+  border: 1px solid white;
+}
+
+.about {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.contact {
+  grid-column: 4;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+}
+.photography {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.videography {
+  grid-column: 3;
+  grid-row: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.graphic_design {
+  grid-column: 4;
+  grid-row: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+/* break for tablet size screens */
+@media screen and (max-width:60em){
+
+  a:link, a:visited {
+    font-size: .75em;
+  }
+}
+/* break for mobile screens */
+@media screen and (max-width:40em){
+  #grid-container {
+    grid-gap: 5px;
+  }
+  a:link, a:visited {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .title {
+    font-size: 1.8em;
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .subtitle {
+    font-size: .9em;
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+  }
+  .about {
+    grid-column: 4;
+    grid-row: 2;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .photography {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .videography {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: middle;
+    justify-self: center;
+  }
+
+  .graphic_design {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: end;
+    justify-self: center;
+
+  }
+}

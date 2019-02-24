@@ -1,6 +1,6 @@
 
 /* styles for the nav and grid placement*/
-#grid-container {
+.grid-container {
  font-family: Telugu Sangam MN, Telugu MN, sans-serif;
   font-size: 1.1em;
   text-align: center;
@@ -9,13 +9,13 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px;
-  background: url(img/hammock.jpg) no-repeat center;
+  background: url("../../img/hammock.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   position: relative;
 }
 
-#title {
+.title {
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 4px;
@@ -26,7 +26,7 @@
   justify-self: center;
 }
 
-#subtitle {
+.subtitle {
   font-size: 1.1em;
   letter-spacing: 2px;
   font-style: oblique;
@@ -50,34 +50,34 @@ a:hover, a:active {
   border: 1px solid white;
 }
 
-#about {
+.about {
   grid-column: 3;
   grid-row: 2;
   align-self: center;
   justify-self: center;
 }
 
-#contact {
+.contact {
   grid-column: 4;
   grid-row: 2;
   align-self: center;
   justify-self: center;
 }
-#photography {
+.photography {
   grid-column: 2;
   grid-row: 3;
   align-self: center;
   justify-self: center;
 }
 
-#videography {
+.videography {
   grid-column: 3;
   grid-row: 3;
   align-self: center;
   justify-self: center;
 }
 
-#graphic_design {
+.graphic_design {
   grid-column: 4;
   grid-row: 3;
   align-self: center;
@@ -101,7 +101,7 @@ a:hover, a:active {
     margin: 5px 5px 5px 5px;
   }
 
-  #title {
+  .title {
     font-size: 1.8em;
     grid-column: 1 / span 4;
     grid-row: 1;
@@ -109,35 +109,35 @@ a:hover, a:active {
     justify-self: center;
   }
 
-  #subtitle {
+  .subtitle {
     font-size: .9em;
     grid-column: 1 / span 4;
     grid-row: 1;
     align-self: center;
     justify-self: center;
   }
-  #about {
+  .about {
     grid-column: 4;
     grid-row: 2;
     align-self: start;
     justify-self: center;
   }
 
-  #photography {
+  .photography {
     grid-column: 3;
     grid-row: 3;
     align-self: start;
     justify-self: center;
   }
 
-  #videography {
+  .videography {
     grid-column: 3;
     grid-row: 3;
     align-self: middle;
     justify-self: center;
   }
 
-  #graphic_design {
+  .graphic_design {
     grid-column: 3;
     grid-row: 3;
     align-self: end;
