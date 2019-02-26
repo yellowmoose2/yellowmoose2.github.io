@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Signika");
-.homegridcontainer {
-  font-family: Telugu Sangam MN, Telugu MN, sans-serif;
-  font-size: 1.1em;
-  text-align: center;
+body {
+  font-family: Telugu Sangam MN, Telugu MN, "Signika", sans-serif;
   color: white;
+  font-size: 1.1em; }
+
+.homegridcontainer {
+  text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -23,7 +25,7 @@
     align-self: center;
     justify-self: center; }
   .homegridcontainer .subtitle {
-    font-size: 1.1em;
+    font-size: 1.3em;
     letter-spacing: 2px;
     font-style: oblique;
     grid-column: 3 / span 2;
@@ -90,9 +92,14 @@
       align-self: center;
       justify-self: center; }
     .homegridcontainer .about {
-      grid-column: 4;
+      grid-column: 2;
       grid-row: 2;
-      align-self: start;
+      align-self: center;
+      justify-self: center; }
+    .homegridcontainer .contact {
+      grid-column: 2;
+      grid-row: 2;
+      align-self: end;
       justify-self: center; }
     .homegridcontainer .photography {
       grid-column: 3;
@@ -109,8 +116,6 @@
       grid-row: 3;
       align-self: end;
       justify-self: center; } }
-  .homegridcontainer .about-grid-container {
-    background-color: red; }
 
 nav {
   text-align: center; }
@@ -120,12 +125,11 @@ nav {
   font-weight: bolder; }
 
 .textboxes {
-  color: white;
   display: flex;
   flex-direction: column;
   background: url("../../img/about.jpg") no-repeat center;
   background-size: 100vw;
-  height: 320px; }
+  height: 340px; }
   .textboxes #textbox1 {
     background-color: white;
     color: black;
@@ -160,22 +164,10 @@ nav {
       height: 720px; }
       .textboxes #textbox1 {
         grid-area: 2 / 4 / span 1 / span 2;
-        align-self: center;
-        background-color: white;
-        color: black;
-        text-align: left;
-        background: rgba(255, 255, 255, 0.4);
-        padding: 10px;
-        font-weight: bold; }
+        align-self: center; }
       .textboxes #textbox2 {
         grid-area: 4 / 2 / span 1 / span 2;
-        align-self: center;
-        background-color: white;
-        color: black;
-        text-align: left;
-        background: rgba(255, 255, 255, 0.4);
-        padding: 10px;
-        font-weight: bold; } }
+        align-self: center; } }
 
 .contact2 {
   background: lightgrey;
@@ -191,18 +183,18 @@ nav {
     justify-content: center; }
   .contact2 .contact-form__title {
     font-size: 2rem; }
-  .contact2 .input-name,
   .contact2 .input-email,
-  .contact2 .input-subject,
-  .contact2 .input-message {
+  .contact2 .input-message,
+  .contact2 .input-name,
+  .contact2 .input-subject {
     width: 100%;
     text-transform: capitalize;
     max-width: 85%; }
-  .contact2 .input-name,
   .contact2 .input-email,
-  .contact2 .input-subject,
+  .contact2 .input-message,
+  .contact2 .input-name,
   .contact2 .input-send,
-  .contact2 .input-message {
+  .contact2 .input-subject {
     font-size: 1rem; }
   .contact2 .input-message {
     height: 200px; }
@@ -210,7 +202,19 @@ nav {
     border-radius: 25px;
     text-transform: capitalize;
     width: 75px;
-    margin: 20px; }
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center; }
+  @media screen and (min-width: 768px) {
+    .contact2 .input-email,
+    .contact2 .input-message,
+    .contact2 .input-name,
+    .contact2 .input-send,
+    .contact2 .input-subject {
+      font-size: 1.5rem; }
+    .contact2 .contact-form__title {
+      font-size: 2.5rem; } }
 
 #videolist {
   text-align: center; }
@@ -224,32 +228,32 @@ nav {
     justify-content: center;
     align-items: center; }
   .photo-container .photo-1 {
-    background-image: url(../../img/banana.jpg);
+    background-image: url("../../img/banana.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .photo-container .photo-2 {
-    background-image: url(../../img/spin.jpg);
+    background-image: url("../../img/spin.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .photo-container .photo-3 {
-    background-image: url(../../img/rcmp.jpg);
+    background-image: url("../../img/rcmp.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .photo-container .photo-4 {
-    background-image: url(../../img/snow.jpg);
+    background-image: url("../../img/snow.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .photo-container .photo-5 {
-    background-image: url(../../img/skater.jpg);
+    background-image: url("../../img/skater.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
   .photo-container .photo-6 {
-    background-image: url(../../img/leaf.jpg);
+    background-image: url("../../img/leaf.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
@@ -261,32 +265,37 @@ nav {
       grid-gap: 10px; }
       .photo-container .photo-1 {
         grid-area: block1;
-        background-image: url(../../img/banana.jpg);
+        background-image: url("../../img/banana.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center; }
       .photo-container .photo-2 {
         grid-area: block2;
-        background-image: url(../../img/spin.jpg);
+        background-image: url("../../img/spin.jpg");
         background-repeat: no-repeat;
-        background-size: cover; }
+        background-size: cover;
+        background-position: center; }
       .photo-container .photo-3 {
         grid-area: block3;
-        background-image: url(../../img/rcmp.jpg);
+        background-image: url("../../img/rcmp.jpg");
         background-repeat: no-repeat;
-        background-size: cover; }
+        background-size: cover;
+        background-position: center; }
       .photo-container .photo-4 {
         grid-area: block4;
-        background-image: url(../../img/snow.jpg);
+        background-image: url("../../img/snow.jpg");
         background-repeat: no-repeat;
-        background-size: cover; }
+        background-size: cover;
+        background-position: center; }
       .photo-container .photo-5 {
         grid-area: block5;
-        background-image: url(../../img/skater.jpg);
+        background-image: url("../../img/skater.jpg");
         background-repeat: no-repeat;
-        background-size: cover; }
+        background-size: cover;
+        background-position: center; }
       .photo-container .photo-6 {
         grid-area: block6;
-        background-image: url(../../img/leaf.jpg);
+        background-image: url("../../img/leaf.jpg");
         background-repeat: no-repeat;
-        background-size: cover; } }
+        background-size: cover;
+        background-position: center; } }

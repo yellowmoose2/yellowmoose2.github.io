@@ -4,14 +4,22 @@
   align-self: center;
   justify-self: center;
 }
+@mixin photostyle {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 $textcolour: white;
-$fontstack: Telugu Sangam MN, Telugu MN, 'Signika', sans-serif;
-// Styles for the landing page using Sass Nesting
-.homegridcontainer {
-  font-family: Telugu Sangam MN, Telugu MN, sans-serif;
+$fontstack: Telugu Sangam MN, Telugu MN, 'Signika', sans-serif; // Styles for the landing page using Sass Nesting
+
+body {
+  font-family: $fontstack;
+  color: $textcolour;
   font-size: 1.1em;
+}
+
+.homegridcontainer {
   text-align: center;
-  color: white;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -33,7 +41,7 @@ $fontstack: Telugu Sangam MN, Telugu MN, 'Signika', sans-serif;
   }
 
   .subtitle {
-    font-size: 1.1em;
+    font-size: 1.3em;
     letter-spacing: 2px;
     font-style: oblique;
     grid-column: 3 / span 2;
@@ -121,9 +129,16 @@ $fontstack: Telugu Sangam MN, Telugu MN, 'Signika', sans-serif;
     }
 
     .about {
-      grid-column: 4;
+      grid-column: 2;
       grid-row: 2;
-      align-self: start;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .contact {
+      grid-column: 2;
+      grid-row: 2;
+      align-self: end;
       justify-self: center;
     }
 
@@ -148,28 +163,27 @@ $fontstack: Telugu Sangam MN, Telugu MN, 'Signika', sans-serif;
       justify-self: center;
     }
   }
-
-  .about-grid-container {
-    background-color: red;
-  }
 }
 // Styling for the About Page Using Sass Nesting
+// Center the text in the Nav Bar
+
 nav {
   text-align: center;
 }
+// Change the colour of the text in the Nav Bar for the current page
 
 #pageon {
   color: red;
   font-weight: bolder;
 }
+// Textbox1, textbox2, and the media break are nested in textboxes
 
 .textboxes {
-  color: white;
   display: flex;
   flex-direction: column;
   background: url("../../img/about.jpg") no-repeat center;
   background-size: 100vw;
-  height: 320px;
+  height: 340px;
 
   #textbox1 {
     background-color: white;
@@ -209,27 +223,14 @@ nav {
     #textbox1 {
       grid-area: 2 / 4 / span 1 / span 2;
       align-self: center;
-      background-color: white;
-      color: black;
-      text-align: left;
-      background: rgba(255, 255, 255, 0.4);
-      padding: 10px;
-      font-weight: bold;
     }
 
     #textbox2 {
       grid-area: 4 / 2 / span 1 / span 2;
       align-self: center;
-      background-color: white;
-      color: black;
-      text-align: left;
-      background: rgba(255, 255, 255, 0.4);
-      padding: 10px;
-      font-weight: bold;
     }
   }
 }
-
 // Styles for the Contact page
 
 .contact2 {
@@ -240,149 +241,146 @@ nav {
   height: 55%;
   margin: 0 auto;
 
-.contact-form {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .contact-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.contact-form__title {
-  font-size: 2rem;
-}
+  .contact-form__title {
+    font-size: 2rem;
+  }
 
-.input-name,
-.input-email,
-.input-subject,
-.input-message {
-  width: 100%;
-  text-transform: capitalize;
-  max-width: 85%;
-}
+  .input-email,
+  .input-message,
+  .input-name,
+  .input-subject {
+    width: 100%;
+    text-transform: capitalize;
+    max-width: 85%;
+  }
 
-.input-name,
-.input-email,
-.input-subject,
-.input-send,
-.input-message {
-  font-size: 1rem;
-}
+  .input-email,
+  .input-message,
+  .input-name,
+  .input-send,
+  .input-subject {
+    font-size: 1rem;
+  }
 
-.input-message {
-  height: 200px;
-}
+  .input-message {
+    height: 200px;
+  }
 
-.input-send {
-  border-radius: 25px;
-  text-transform: capitalize;
-  width: 75px;
-  margin: 20px;
-}
-}
+  .input-send {
+    border-radius: 25px;
+    text-transform: capitalize;
+    width: 75px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    .input-email,
+    .input-message,
+    .input-name,
+    .input-send,
+    .input-subject {
+      font-size: 1.5rem;
+    }
 
+    .contact-form__title {
+      font-size: 2.5rem;
+    }
+  }
+}
 // Styles for the Videography Page
 #videolist {
   text-align: center;
 }
-
 // Styles for the Photography Page
 .photo-container {
   display: flex;
   flex-direction: column;
 
-.photo {
-  flex: 0 0 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.photo-1 {
-  background-image: url(../../img/banana.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.photo-2 {
-  background-image: url(../../img/spin.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.photo-3 {
-  background-image: url(../../img/rcmp.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.photo-4 {
-  background-image: url(../../img/snow.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.photo-5 {
-  background-image: url(../../img/skater.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.photo-6 {
-  background-image: url(../../img/leaf.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-@media screen and (min-width: 576px) {
-    display: grid;
-    height: 70vh;
-    grid-template-areas:
-      "block1 block2 block2 block3"
-      "block4 block4 block5 block6";
-    grid-gap: 10px;
+  .photo {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .photo-1 {
-    grid-area: block1;
-    background-image: url(../../img/banana.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url("../../img/banana.jpg");
+    @include photostyle;
   }
 
   .photo-2 {
-    grid-area: block2;
-    background-image: url(../../img/spin.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../../img/spin.jpg");
+    @include photostyle;
   }
 
   .photo-3 {
-    grid-area: block3;
-    background-image: url(../../img/rcmp.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../../img/rcmp.jpg");
+    @include photostyle;
   }
 
   .photo-4 {
-    grid-area: block4;
-    background-image: url(../../img/snow.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../../img/snow.jpg");
+    @include photostyle;
   }
 
   .photo-5 {
-    grid-area: block5;
-    background-image: url(../../img/skater.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../../img/skater.jpg");
+    @include photostyle;
   }
 
   .photo-6 {
-    grid-area: block6;
-    background-image: url(../../img/leaf.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../../img/leaf.jpg");
+    @include photostyle;
   }
-}
+  @media screen and (min-width: 576px) {
+    display: grid;
+    height: 70vh;
+    grid-template-areas: "block1 block2 block2 block3" "block4 block4 block5 block6";
+    grid-gap: 10px;
 
+    .photo-1 {
+      grid-area: block1;
+      background-image: url("../../img/banana.jpg");
+      @include photostyle;
+    }
+
+    .photo-2 {
+      grid-area: block2;
+      background-image: url("../../img/spin.jpg");
+      @include photostyle;
+    }
+
+    .photo-3 {
+      grid-area: block3;
+      background-image: url("../../img/rcmp.jpg");
+      @include photostyle;
+    }
+
+    .photo-4 {
+      grid-area: block4;
+      background-image: url("../../img/snow.jpg");
+      @include photostyle;
+    }
+
+    .photo-5 {
+      grid-area: block5;
+      background-image: url("../../img/skater.jpg");
+      @include photostyle;
+    }
+
+    .photo-6 {
+      grid-area: block6;
+      background-image: url("../../img/leaf.jpg");
+      @include photostyle;
+    }
+  }
 }
