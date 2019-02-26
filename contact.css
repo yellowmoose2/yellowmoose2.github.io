@@ -1,3 +1,4 @@
+
 /* align the nav items to the center and change the color of the current nav
 item to red */
 #pageon {
@@ -9,9 +10,9 @@ nav {
   text-align: center;
 }
 
-div {
+/* div {
   text-align: center;
-}
+} */
 
 /*Styles for mobile, tablet, and desktop start*/
 .contact {

@@ -1,7 +1,5 @@
-.gridcontainer {
-  background: url("../../img/hammock.jpg") no-repeat center center fixed;
-  height: 50vh;
-  display: block;
+@import url("https://fonts.googleapis.com/css?family=Signika");
+.homegridcontainer {
   font-family: Telugu Sangam MN, Telugu MN, sans-serif;
   font-size: 1.1em;
   text-align: center;
@@ -10,111 +8,285 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px;
+  background: url("../../img/hammock.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
-  position: relative; }
-
-.title {
-  font-size: 2em;
-  font-weight: bold;
-  letter-spacing: 4px;
-  font-style: oblique;
-  grid-column: 3 / span 2;
-  grid-row: 1;
-  align-self: center;
-  justify-self: center; }
-
-.subtitle {
-  font-size: 1.1em;
-  letter-spacing: 2px;
-  font-style: oblique;
-  grid-column: 3 / span 2;
-  grid-row: 1;
-  align-self: end;
-  justify-self: center; }
-
-a:link, a:visited {
-  background-color: none;
-  border: 2px solid white;
-  border-radius: 5px;
-  color: white;
-  padding: 10px 25px;
-  text-decoration: none;
-  min-width: 120px; }
-
-a:hover, a:active {
-  border: 1px solid white; }
-
-.about {
-  grid-column: 3;
-  grid-row: 2;
-  align-self: center;
-  justify-self: center; }
-
-.contact {
-  grid-column: 4;
-  grid-row: 2;
-  align-self: center;
-  justify-self: center; }
-
-.photography {
-  grid-column: 2;
-  grid-row: 3;
-  align-self: center;
-  justify-self: center; }
-
-.videography {
-  grid-column: 3;
-  grid-row: 3;
-  align-self: center;
-  justify-self: center; }
-
-.graphic_design {
-  grid-column: 4;
-  grid-row: 3;
-  align-self: center;
-  justify-self: center; }
-
-/* break for tablet size screens */
-@media screen and (max-width: 60em) {
-  a:link, a:visited {
-    font-size: .75em; } }
-
-/* break for mobile screens */
-@media screen and (max-width: 40em) {
-  #grid-container {
-    grid-gap: 5px; }
-  a:link, a:visited {
-    margin: 5px 5px 5px 5px; }
-  .title {
-    font-size: 1.8em;
-    grid-column: 1 / span 4;
-    grid-row: 1;
-    align-self: start;
-    justify-self: center; }
-  .subtitle {
-    font-size: .9em;
-    grid-column: 1 / span 4;
+  position: relative;
+  /* break for mobile screens */ }
+  .homegridcontainer .title {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: oblique;
+    grid-column: 3 / span 2;
     grid-row: 1;
     align-self: center;
     justify-self: center; }
-  .about {
+  .homegridcontainer .subtitle {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    font-style: oblique;
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    align-self: end;
+    justify-self: center; }
+  .homegridcontainer a:link,
+  .homegridcontainer a:visited {
+    background-color: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    min-width: 120px; }
+  .homegridcontainer a:active,
+  .homegridcontainer a:hover {
+    border: 1px solid white; }
+  .homegridcontainer .about {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center; }
+  .homegridcontainer .contact {
     grid-column: 4;
     grid-row: 2;
-    align-self: start;
+    align-self: center;
     justify-self: center; }
-  .photography {
+  .homegridcontainer .photography {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center; }
+  .homegridcontainer .videography {
     grid-column: 3;
     grid-row: 3;
-    align-self: start;
+    align-self: center;
     justify-self: center; }
-  .videography {
-    grid-column: 3;
+  .homegridcontainer .graphic_design {
+    grid-column: 4;
     grid-row: 3;
-    align-self: middle;
+    align-self: center;
     justify-self: center; }
-  .graphic_design {
-    grid-column: 3;
-    grid-row: 3;
-    align-self: end;
-    justify-self: center; } }
+  @media screen and (max-width: 60em) {
+    .homegridcontainer a:link,
+    .homegridcontainer a:visited {
+      font-size: 0.75em; } }
+  @media screen and (max-width: 40em) {
+    .homegridcontainer #grid-container {
+      grid-gap: 5px; }
+    .homegridcontainer a:link,
+    .homegridcontainer a:visited {
+      margin: 5px; }
+    .homegridcontainer .title {
+      font-size: 1.8em;
+      grid-column: 1 / span 4;
+      grid-row: 1;
+      align-self: start;
+      justify-self: center; }
+    .homegridcontainer .subtitle {
+      font-size: 0.9em;
+      grid-column: 1 / span 4;
+      grid-row: 1;
+      align-self: center;
+      justify-self: center; }
+    .homegridcontainer .about {
+      grid-column: 4;
+      grid-row: 2;
+      align-self: start;
+      justify-self: center; }
+    .homegridcontainer .photography {
+      grid-column: 3;
+      grid-row: 3;
+      align-self: start;
+      justify-self: center; }
+    .homegridcontainer .videography {
+      grid-column: 3;
+      grid-row: 3;
+      align-self: middle;
+      justify-self: center; }
+    .homegridcontainer .graphic_design {
+      grid-column: 3;
+      grid-row: 3;
+      align-self: end;
+      justify-self: center; } }
+  .homegridcontainer .about-grid-container {
+    background-color: red; }
+
+nav {
+  text-align: center; }
+
+#pageon {
+  color: red;
+  font-weight: bolder; }
+
+.textboxes {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background: url("../../img/about.jpg") no-repeat center;
+  background-size: 100vw;
+  height: 320px; }
+  .textboxes #textbox1 {
+    background-color: white;
+    color: black;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 50px 15px 0; }
+  .textboxes #textbox2 {
+    background-color: white;
+    color: black;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 15px 15px; }
+  @media screen and (min-width: 768px) {
+    .textboxes {
+      margin: 0 auto;
+      color: white;
+      display: grid;
+      justify-content: space-evenly;
+      align-self: center;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+      background: url("../../img/about.jpg") no-repeat center;
+      background-size: cover;
+      font-size: 1.6em;
+      max-width: 1080px;
+      height: 720px; }
+      .textboxes #textbox1 {
+        grid-area: 2 / 4 / span 1 / span 2;
+        align-self: center;
+        background-color: white;
+        color: black;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        font-weight: bold; }
+      .textboxes #textbox2 {
+        grid-area: 4 / 2 / span 1 / span 2;
+        align-self: center;
+        background-color: white;
+        color: black;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        font-weight: bold; } }
+
+.contact2 {
+  background: lightgrey;
+  color: black;
+  text-transform: capitalize;
+  max-width: 1080px;
+  height: 55%;
+  margin: 0 auto; }
+  .contact2 .contact-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .contact2 .contact-form__title {
+    font-size: 2rem; }
+  .contact2 .input-name,
+  .contact2 .input-email,
+  .contact2 .input-subject,
+  .contact2 .input-message {
+    width: 100%;
+    text-transform: capitalize;
+    max-width: 85%; }
+  .contact2 .input-name,
+  .contact2 .input-email,
+  .contact2 .input-subject,
+  .contact2 .input-send,
+  .contact2 .input-message {
+    font-size: 1rem; }
+  .contact2 .input-message {
+    height: 200px; }
+  .contact2 .input-send {
+    border-radius: 25px;
+    text-transform: capitalize;
+    width: 75px;
+    margin: 20px; }
+
+#videolist {
+  text-align: center; }
+
+.photo-container {
+  display: flex;
+  flex-direction: column; }
+  .photo-container .photo {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .photo-container .photo-1 {
+    background-image: url(../../img/banana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .photo-container .photo-2 {
+    background-image: url(../../img/spin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .photo-container .photo-3 {
+    background-image: url(../../img/rcmp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .photo-container .photo-4 {
+    background-image: url(../../img/snow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .photo-container .photo-5 {
+    background-image: url(../../img/skater.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .photo-container .photo-6 {
+    background-image: url(../../img/leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  @media screen and (min-width: 576px) {
+    .photo-container {
+      display: grid;
+      height: 70vh;
+      grid-template-areas: "block1 block2 block2 block3" "block4 block4 block5 block6";
+      grid-gap: 10px; }
+      .photo-container .photo-1 {
+        grid-area: block1;
+        background-image: url(../../img/banana.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .photo-container .photo-2 {
+        grid-area: block2;
+        background-image: url(../../img/spin.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .photo-container .photo-3 {
+        grid-area: block3;
+        background-image: url(../../img/rcmp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .photo-container .photo-4 {
+        grid-area: block4;
+        background-image: url(../../img/snow.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .photo-container .photo-5 {
+        grid-area: block5;
+        background-image: url(../../img/skater.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .photo-container .photo-6 {
+        grid-area: block6;
+        background-image: url(../../img/leaf.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; } }
